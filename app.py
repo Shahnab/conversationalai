@@ -9,8 +9,8 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 @st.cache(hash_funcs={transformers.models.gpt2.tokenization_gpt2_fast.GPT2TokenizerFast: hash}, suppress_st_warning=True)
 def load_data():    
- tokenizer = AutoTokenizer.from_pretrained("ncoop57/DiGPTame-medium")
- model = AutoModelForCausalLM.from_pretrained("ncoop57/DiGPTame-medium")
+ tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-small")
+ model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-small")
 #Setup tokenizer
  tokenizer.padding_side = "right"
  return tokenizer, model
