@@ -11,6 +11,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 def load_data():    
  tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-small")
  model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-small")
+ tokenizer.padding_side = "right"
  return tokenizer, model
 tokenizer, model = load_data()
 
